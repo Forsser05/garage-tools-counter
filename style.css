@@ -1,0 +1,123 @@
+body {
+    background-image: url('image.webp'); /* Replace with your own background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#welcome-msg {
+    background: linear-gradient(90deg, #ff6a00, #ffa500);
+    padding: 12px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#welcome-msg:hover {
+    animation: spin 0.6s ease-in-out;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(30deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#counter-app {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #f39c12;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    padding: 50px 30px;
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(5px);
+}
+
+.counter-nb {
+    font-size: 5rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease;
+}
+
+.counter-nb.bounce {
+    transform: scale(1.2);
+}
+
+button {
+    background-color: #1f80e0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    width: 90px;
+    height: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 8px;
+}
+
+button:hover {
+    background-color: #176cb7;
+    transform: scale(1.1);
+}
+
+#reset-button {
+    background-color: #f1c40f;
+}
+
+#reset-button:hover {
+    background-color: #f39c12;
+}
+
+#save-button {
+    background-color: #27ae60;
+}
+
+#save-button:hover {
+    background-color: #2ecc71;
+}
+
+#saved-entries {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Make buttons stack on small screens */
+@media (max-width: 600px) {
+    #counter-app {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #welcome-msg {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .counter-nb {
+        font-size: 4rem;
+    }
+}
